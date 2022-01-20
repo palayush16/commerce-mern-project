@@ -1,55 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
 .container-authpage{
     width: 65vw;
-    margin:80px auto;
+    margin:80px auto 0;
     background-color: #5865f2;
     color: white;
     height:65vh;
     display: flex;
-    flex-direction:horizontal;
+    box-sizing: content-box;
     font-family:'Rubik',Monospace;
     border-radius:10px;
-   
+    position: inherit;
     
 }
 .container-authpage-desc{
     
     width:65%;
-    position: relative;
+    
     background-color:#5865f2;
-
+    height:100%;
     font-family:'Rubik',Monospace ;
     
     border-radius:10px;
-   
+    position: inherit;
 }
-.container-authpage-desc h5{
-    color:#000;
-}
-.desc-container{
 
-    position: absolute;
-    margin-right: 50px;
-    margin-left:20px;
-    font-size:2.5rem;
+.desc-container{
+   
     
+    margin-right: 50px;
+    margin-left:0px;
+    font-size:2.5rem;
+    width:100%;
+    max-height:inherit;
     font-family:'Rubik',Monospace ;
+
     
 }
 
 .container-authpage-cta{
     border-radius:10px;
-    width:35%;
-    align-self:center;
-    align-content:center;
-    position:relative;
-    align-items: center;
+    min-width:35%;
+    background-color:white;
+    
     height:100%;
+    
+    position:relative;
+    
+    
     display: flex;
-    flex-direction:column;
+    
     justify-content: center;
     align-items: center;
-    background-color:white;
+    
     
     
 }
@@ -77,9 +79,9 @@
     transform:scale(1.05);
 }
 .buttons{
-    position:absolute;
+    position:relative;
     color: black;
-    top: 25%;
+    
     width: 80%;
     display: flex;
     flex-direction:column;
@@ -97,4 +99,34 @@ button h4{
     font-family: 'Rubik',Monospace;
     margin:10%;
     letter-spacing:2px;
+}
+
+@media only screen and (max-width: 850px) {
+   
+    .container-authpage{
+       height:min-content;
+       display:list-item;
+       width:80%;
+       margin: auto;
+       padding:0 20px 40px;
+    }
+    .container-authpage-desc{
+        width:100%;
+        margin: auto;
+       
+    }
+    .container-authpage-cta{
+        
+        height:50%;
+        width:90%;
+        margin: auto;
+    }
+    .desc-container{
+        margin: auto;
+        text-align: center;
+        
+    }
+    .buttons{
+        padding:20px 0;
+    }
 }

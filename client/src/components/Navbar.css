@@ -25,6 +25,7 @@ body{
     justify-content: space-between;
     padding:0  30px;
     max-height: 100%;
+    align-items: center;
 }
 .nav-links{
     
