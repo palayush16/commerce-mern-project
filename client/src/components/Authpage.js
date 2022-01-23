@@ -1,6 +1,14 @@
 import React from 'react'
 import './Authpage.css'
+const axios = require('axios');
+
+
 const Authpage = () => {
+
+    function RedirectGoogleSSO(){
+        const newWindow = window.open("http://localhost:5000/auth/google", "_self");
+    }
+
     return (
         <div className="container-authpage">
             <div className="container-authpage-desc">
@@ -15,8 +23,8 @@ const Authpage = () => {
                     
                     <h2>Login or Signup through BitsMail</h2>
                 
-                    <button className="button-cta"><h4>LOGIN</h4></button>
-                    <button className="button-cta"><h4>SIGN UP</h4></button>
+                    <button className="button-cta" onClick={RedirectGoogleSSO}><h4>LOGIN</h4></button>
+                    <button className="button-cta" onClick={RedirectGoogleSSO}><h4>SIGN UP</h4></button>
                 </div>
             </div>
         </div>
