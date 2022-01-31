@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from "./Navbar.js"
 import './Authpage.css'
 const axios = require('axios');
 
@@ -10,7 +11,10 @@ const Authpage = () => {
     }
 
     return (
+        <div>
+            <Navbar/>
         <div className="container-authpage">
+           
             <div className="container-authpage-desc">
                 <div className="desc-container">
                     {/* <h3>Ever felt tired of selling books and other accessories by spamming it on various WhatApp Groups at end of semseter ?  Here are we to help you </h3> */}
@@ -27,6 +31,7 @@ const Authpage = () => {
                     <button className="button-cta" onClick={RedirectGoogleSSO}><h4>SIGN UP</h4></button>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
